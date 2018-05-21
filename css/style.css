@@ -1786,3 +1786,61 @@ header {
     transform: scale(0);
   }
 }
+
+figure {
+  width: 80%;
+}
+
+user agent stylesheet figure {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 40px;
+  -webkit-margin-end: 40px;
+}
+
+.bellcurve.animate.inview img {
+  opacity: 0.9;
+  background: #fff;
+}
+
+.animate.bellcurve.inview {
+  margin: auto;
+}
+
+.bellcurve.animate img {
+  opacity: 0;
+  -webkit-transition: all 750ms ease-in-out;
+  -moz-transition: all 750ms ease-in-out;
+  -ms-transition: all 750ms ease-in-out;
+  -o-transition: all 750ms ease-in-out;
+  transition: all 750ms ease-in-out;
+}
+@media screen and (min-width: 600px) .bellcurve img {
+  width: 80%;
+}
+.bellcurve img {
+  width: 100%;
+  height: auto !important;
+  margin-top: 20px;
+}
+
+#about {
+  margin: auto;
+  float: none;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/* DNA PAGE */
+
+#rpp {
+  margin: auto;
+}
