@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+  <title>Prorenata Labs</title>
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+
+  <!-- Owl Carousel -->
+  <link type="text/css" rel="stylesheet" href="css/owl.carousel.css" />
+  <link type="text/css" rel="stylesheet" href="css/owl.theme.default.css" />
+
+  <!-- Magnific Popup -->
+  <link type="text/css" rel="stylesheet" href="css/magnific-popup.css" />
+
+  <!-- Font Awesome Icon -->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+
+  <!-- Custom stlylesheet -->
+  <link type="text/css" rel="stylesheet" href="css/style.css" />
+
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <!-- Style The Contact Form How Ever You Prefer -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/dwyl/learn-to-send-email-via-google-script-html-no-server/master/style.css">
+
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="home-genetics">
+    <!-- Background Image -->
+    <div class="bg-img" style="background-image: url('./img/labbackground.png');">
+      <div class="overlay"></div>
+    </div>
+    <!-- /Background Image -->
+
+    <!-- Nav -->
+    <nav id="nav" class="navbar nav-transparent">
+      <div class="container">
+
+        <div class="navbar-header">
+          <!-- Logo -->
+          <div class="navbar-brand">
+            <a href="index.html">
+              <img class="logo" src="img/prolabslogo.png" alt="logo">
+              <img class="logo-alt" src="img/prolabslogo.png" alt="logo">
+            </a>
+          </div>
+          <!-- /Logo -->
+
+          <!-- Collapse nav button -->
+          <div class="nav-collapse">
+            <span></span>
+          </div>
+          <!-- /Collapse nav button -->
+        </div>
+
+        <!--  Main navigation  -->
+        <ul class="main-nav nav navbar-nav navbar-right">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <!-- <li>
+              <a href="#about">About</a>
+            </li> -->
+          <li class="has-dropdown">
+            <a href="genetics.html">Tests</a>
+            <ul class="dropdown">
+              <!-- <li>
+                  <a href="dna.html">
+                    <i class="fa fa-square-o"></i> DNA</a>
+                </li> -->
+              <li>
+                <a href="genetics.html">
+                  <i class="fa fa-square-o"></i> Genetics</a>
+              </li>
+            </ul>
+          </li>
+          <!-- <li>
+              <a href="#pricing">Prices</a>
+            </li>
+            <li>
+              <a href="#team">Team</a>
+            </li> -->
+          <li class="has-dropdown">
+            <a href="forms.html">Forms</a>
+            <ul class="dropdown">
+              <li>
+                <a href="/documents/25-gene req form.pdf">
+                  <i class="fa fa-square-o"></i> 25-gene REQ Form</a>
+              </li>
+              <li>
+                <a href="/documents/reqform.pdf">
+                  <i class="fa fa-square-o"></i> Toxicology REQ Form</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="index.html#contact">Contact</a>
+          </li>
+        </ul>
+        <!-- /Main navigation -->
+
+      </div>
+    </nav>
+    <!-- /Nav -->
+  </header>
+
+  <!-- Order Form -->
+  <div id="forms" class="section md-padding">
+
+    <!-- Container -->
+    <div class="container">
+      <h2 class="content-head is-center"> Supply Order Form</h2>
+      <aside>
+        <p>
+          Fill in the shipping information below and select the supplies you need and we will ship them via UPS ground which takes
+          5-7 business days for delivery. Supply orders received after 10:00 a.m. PST will be processed the following business
+          day.
+        </p>
+      </aside>
+
+      <br>
+      <br>
+      <p>(* required field)</p>
+      <form id="gform" method="POST" class="pure-form pure-form-aligned" data-email="example@email.net" action="https://script.google.com/macros/s/AKfycbxa2fYKKToIho1P1oJxElux8bKj1L3N4xMNwwPyzQ/exec">
+        <!-- change the form action to your script url -->
+
+        <fieldset class="pure-group">
+          <label for="name">* Clinic Name: </label>
+          <input id="name" name="Clinic Name" value="" required/>
+        </fieldset>
+
+        <fieldset class="pure-group">
+          <label for="email">
+            * Email Address:</label>
+          <input id="email" name="E-Mail" type="email" value="" placeholder="your.name@email.com" required />
+          <span id="email-invalid" style="display:none">
+            Must be a valid email address</span>
+        </fieldset>
+
+        <fieldset class="pure-group">
+          <label for="phone">
+            * Phone Number</label>
+          <input id="phone" name="Phone" type="tel" value="" placeholder="800-555-0000" class="pure-input-1-2" required />
+          <span id="phone-invalid" style="display:none">
+            Must be a valid phone number</span>
+        </fieldset>
+
+        <fieldset class="pure-group">
+          <label for="address">
+            * Street Address</label>
+          <input id="address" name="Address" value="" required placeholder="123 Main St" />
+        </fieldset>
+
+        <fieldset class="pure-group">
+          <label for="address2">
+            Address Line 2</label>
+          <input id="address2" name="Address 2" value="" />
+        </fieldset>
+
+        <fieldset>
+          <label for="city">
+            * City</label>&nbsp;&nbsp;&nbsp;&nbsp;
+          <input id="city" name="City" value="" placeholder="New York City" required/>
+          <label for="state">
+            &nbsp;&nbsp;&nbsp;&nbsp;* State</label>&nbsp;&nbsp;&nbsp;&nbsp;
+          <select id="state" name="State" value="" required>
+            <option>TX</option>
+            <option>AZ</option>
+            <option>OR</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="pure-group">
+          <label for="zipcode">
+            Zip Code</label>
+          <input id="zipcode" name="Zipcode" value="" required />
+        </fieldset>
+
+        <fieldset class="pure-group">
+          <label for="collectioncup">
+            Collection Cups with Vacutainer Tube Port (Packaged as case of 250)</label>
+          <br>
+          <select id="collectioncup" name="Collection Cup" value="" class="pure-input-1-2">
+            <option>None needed</option>
+            <option>250 cups</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="pure-group">
+          <label for="urinetubes">
+            Urine Vacutainer Tubes (Used with Straw Hubs & Collection Cups with Vacutainer Tube Port, packaged in 50 tube racks)</label>
+          <select id="urinetubes" name="Urine Vac Tubes" value="" class="pure-input-1-2">
+            <option>None needed</option>
+            <option>100 tubes</option>
+            <option>200 tubes</option>
+
+          </select>
+        </fieldset>
+
+        <fieldset class="pure-group">
+          <label for="strawhubs">
+            Urine Vacutainer Collection Straw Hubs (For use with POC or non-Vacutainer port cups, packaged as 100/bag)</label>
+          <select id="strawhubs" name="Straw Hubs" value="" class="pure-input-1-2">
+            <option>None needed</option>
+            <option>100 straw hubs</option>
+            <option>200 straw hubs</option>
+            <option>300 straw hubs</option>
+
+          </select>
+        </fieldset>
+
+        <fieldset class="pure-group">
+          <label for="tearpadlab">
+            Laboratory Requisition (Tear Pad with 100 per pad; To be used only when electronic requisitions/portal is unavailable)</label>
+          <select id="tearpadlab" name="Tear Pad Lab" value="" class="pure-input-1-2">
+            <option>None needed</option>
+            <option>1 Pad (100 forms)</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="pure-group">
+          <label for="tearpadpt">
+            Patient Educational/Information Form (Tear Pad with 100 per pad)</label>
+          <br>
+          <select id="tearpadpt" name="Tear Pad Patient" value="" class="pure-input-1-2">
+            <option>None needed</option>
+            <option>1 Pad (100 forms)</option>
+            <option>2 Pads (200 forms)</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="pure-group">
+          <label for="speciminlabel">
+            Zebra Printer Specimen Labels (1000/roll)</label>
+          <br>
+          <select id="speciminlabel" name="Specimin Labels" value="" class="pure-input-1-2">
+            <option>None needed</option>
+            <option>1 roll</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="pure-group">
+          <label for="speciminbag">
+            Biohazard Specimen Bags w/Requisition Pouch</label>
+          <br>
+          <select id="speciminbag" name="Specimin Bags" value="" class="pure-input-1-2">
+            <option>None needed</option>
+            <option>100 Biohazard Specimen Bags</option>
+            <option>200 Biohazard Specimen Bags</option>
+            <option>300 Biohazard Specimen Bags</option>
+            <option>400 Biohazard Specimen Bags</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="pure-group">
+          <label for="shippingbag">
+            UPS Lab Pak Shipping Bags</label>
+          <br>
+          <select id="shippingbag" name="Shipping Bags" value="" class="pure-input-1-2">
+            <option>None needed</option>
+            <option>20 UPS Shipping Bags</option>
+            <option>40 UPS Shipping Bags</option>
+            <option>60 UPS Shipping Bags</option>
+            <option>80 UPS Shipping Bags</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="pure-group">
+          <label for="shippingbox">
+            UPS Shipping Boxes</label>
+          <br>
+          <select id="shippingbox" name="Shipping Boxes" value="" class="pure-input-1-2">
+            <option>None needed</option>
+            <option>20 UPS Shipping Boxes</option>
+            <option>40 UPS Shipping Boxes</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="pure-group">
+          <label for="shippinglabel">
+            UPS Shipping Labels</label>
+          <br>
+          <select id="shippinglabel" name="Shipping Labels" value="" class="pure-input-1-2">
+            <option>None needed</option>
+            <option>20 UPS Shipping Labels</option>
+            <option>40 UPS Shipping Labels</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="pure-group">
+          <label for="message">Additional Requests, Instructions, Comments? </label>
+          <textarea id="message" name="Message" rows="10" placeholder="Tell us what's on your mind..."></textarea>
+        </fieldset>
+
+        <button class="button-success pure-button button-xlarge" style="
+          color: white;
+          border-radius: 4px;
+          text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+          background: rgb(51, 85, 197);
+          float: left;
+        ">
+          Place Order</button>
+      </form>
+
+      <!-- Customise the Thank you Message People See when they submit the form: -->
+      <div style="display:none;" id="thankyou_message">
+        <h2>
+          <em>Thanks</em> for your order! Our team is prepping your items.</h2>
+      </div>
+
+      <!-- END -->
+
+    </div>
+    <!-- /Container -->
+
+  </div>
+  <!-- /Order Form -->
+
+  <!-- Footer -->
+  <footer id="footer" class="sm-padding bg-dark">
+
+    <!-- Container -->
+    <div class="container">
+
+      <!-- Row -->
+      <div class="row">
+
+        <div class="col-md-12">
+
+          <!-- footer logo -->
+          <div class="footer-logo">
+            <a href="index.html">
+              <img class="logo" src="img/prolabslogo.png" alt="logo">
+            </a>
+          </div>
+          <!-- /footer logo -->
+
+
+          <!-- footer copyright -->
+          <div class="footer-copyright">
+            <p>Prorenta Labs © 2018. All Rights Reserved</p>
+          </div>
+          <!-- /footer copyright -->
+
+        </div>
+
+      </div>
+      <!-- /Row -->
+
+    </div>
+    <!-- /Container -->
+
+  </footer>
+  <!-- /Footer -->
+
+  <!-- Back to top -->
+  <div id="back-to-top"></div>
+  <!-- /Back to top -->
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <!-- /Preloader -->
+
+  <!-- Plugins -->
+  <!-- Submit the Form to Google Using "AJAX" -->
+  <script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/learn-to-send-email-via-google-script-html-no-server/master/form-submission-handler.js"></script>
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+</html>
