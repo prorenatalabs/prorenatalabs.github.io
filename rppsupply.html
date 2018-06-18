@@ -71,9 +71,19 @@
           <li>
             <a href="index.html">Home</a>
           </li>
-          <!-- <li>
-              <a href="#about">About</a>
-            </li> -->
+          <li class="has-dropdown">
+            <a href="portal.html">Provider Portal</a>
+            <ul class="dropdown">
+              <li>
+                <a href="rppsupply.html">
+                  <i class="fa fa-square-o"></i> RPP Supply Order Form</a>
+              </li>
+              <li>
+                <a href="toxsupply.html">
+                  <i class="fa fa-square-o"></i> Toxicology Supply Order Form</a>
+              </li>
+            </ul>
+          </li>
           <li class="has-dropdown">
             <a href="genetics.html">Tests</a>
             <ul class="dropdown">
@@ -87,6 +97,7 @@
               </li>
             </ul>
           </li>
+
           <!-- <li>
               <a href="#pricing">Prices</a>
             </li>
@@ -122,7 +133,7 @@
 
     <!-- Container -->
     <div class="container">
-      <h2 class="content-head is-center"> Supply Order Form</h2>
+      <h2 class="content-head is-center"> RPP Supply Order Form</h2>
       <aside>
         <p>
           Fill in the shipping information below and select the supplies you need and we will ship them via UPS ground which takes
@@ -134,26 +145,25 @@
       <br>
       <br>
       <p>(* required field)</p>
-      <form id="gform" method="POST" class="pure-form pure-form-aligned" data-email="example@email.net" action="https://script.google.com/macros/s/AKfycbwlgsboTPuHfuTZJqplXQIjmY9Thzok748CSRPsb1mk5xrAg7i2/exec">
+      <form id="gform" method="POST" class="pure-form pure-form-aligned" data-email="example@email.net" action="https://script.google.com/macros/s/AKfycbxa2fYKKToIho1P1oJxElux8bKj1L3N4xMNwwPyzQ/exec">
         <!-- change the form action to your script url -->
 
         <fieldset class="pure-group">
-          <label for="name">* Clinic Name: </label>
-          <input id="name" name="Clinic Name" value="" required/>
+          <label for="name">* Physician Name: </label>
+          <input id="name" name="Physician Name" value="" required/>
         </fieldset>
 
         <fieldset class="pure-group">
-          <label for="email">
-            * Email Address:</label>
-          <input id="email" name="E-Mail" type="email" value="" placeholder="your.name@email.com" required />
-          <span id="email-invalid" style="display:none">
-            Must be a valid email address</span>
+          <label for="facility">
+            * Facility:</label>
+          <input id="facility" name="Facility" value="" required />
+
         </fieldset>
 
         <fieldset class="pure-group">
           <label for="phone">
-            * Phone Number</label>
-          <input id="phone" name="Phone" type="tel" value="" placeholder="800-555-0000" required />
+            * Facility Phone Number</label>
+          <input id="phone" name="Phone" type="tel" value="" placeholder="800-555-0000" class="pure-input-1-2" required />
           <span id="phone-invalid" style="display:none">
             Must be a valid phone number</span>
         </fieldset>
@@ -190,117 +200,101 @@
         </fieldset>
 
         <fieldset class="pure-group">
-          <label for="collectioncup">
-            Collection Cups with Vacutainer Tube Port (Packaged as case of 250)</label>
-          <select id="collectioncup" name="Collection Cup" value="" class="pure-input-1-2">
-            <option>None needed</option>
-            <option>250 cups</option>
-          </select>
+          <label for="sp-instructions">* Special Instructions </label>
+          <textarea id="sp-instructions" name="Special Instructions" rows="10"></textarea>
         </fieldset>
 
         <fieldset class="pure-group">
-          <label for="urinetubes">
-            Urine Vacutainer Tubes (Used with Straw Hubs & Collection Cups with Vacutainer Tube Port, packaged in 50 tube racks)</label>
-          <select id="urinetubes" name="Urine Vac Tubes" value="" class="pure-input-1-2">
-            <option>None needed</option>
-            <option>100 tubes</option>
-            <option>200 tubes</option>
-
-          </select>
-        </fieldset>
-
-        <fieldset class="pure-group">
-          <label for="strawhubs">
-            Urine Vacutainer Collection Straw Hubs (For use with POC or non-Vacutainer port cups, packaged as 100/bag)</label>
-          <select id="strawhubs" name="Straw Hubs" value="" class="pure-input-1-2">
-            <option>None needed</option>
-            <option>100 straw hubs</option>
-            <option>200 straw hubs</option>
-            <option>300 straw hubs</option>
-
-          </select>
-        </fieldset>
-
-        <fieldset class="pure-group">
-          <label for="tearpadlab">
-            Laboratory Requisition (Tear Pad with 100 per pad; To be used only when electronic requisitions/portal is unavailable)</label>
-          <select id="tearpadlab" name="Tear Pad Lab" value="" class="pure-input-1-2">
-            <option>None needed</option>
-            <option>1 Pad (100 forms)</option>
-          </select>
-        </fieldset>
-
-        <fieldset class="pure-group">
-          <label for="tearpadpt">
-            Patient Educational/Information Form (Tear Pad with 100 per pad)</label>
-          <select id="tearpadpt" name="Tear Pad Patient" value="" class="pure-input-1-2">
-            <option>None needed</option>
-            <option>1 Pad (100 forms)</option>
-            <option>2 Pads (200 forms)</option>
-          </select>
-        </fieldset>
-
-        <fieldset class="pure-group">
-          <label for="speciminlabel">
-            Zebra Printer Specimen Labels (1000/roll)</label>
+          <label for="reqform">
+            Requisition Forms</label>
           <br>
-          <select id="speciminlabel" name="Specimin Labels" value="" class="pure-input-1-2">
+          <select id="reqform" name="Requisition Forms" value="">
             <option>None needed</option>
-            <option>1 roll</option>
+            <option>10</option>
+            <option>15</option>
           </select>
         </fieldset>
 
         <fieldset class="pure-group">
-          <label for="speciminbag">
-            Biohazard Specimen Bags w/Requisition Pouch</label>
+          <label for="nasalswab">
+            Nasal Swabs</label>
           <br>
-          <select id="speciminbag" name="Specimin Bags" value="" class="pure-input-1-2">
+          <select id="nasalswab" name="Nasal Swabs" value="">
             <option>None needed</option>
-            <option>100 Biohazard Specimen Bags</option>
-            <option>200 Biohazard Specimen Bags</option>
-            <option>300 Biohazard Specimen Bags</option>
-            <option>400 Biohazard Specimen Bags</option>
+            <option>10</option>
+            <option>15</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="pure-group">
+          <label for="caryblairs">
+            Cary Blairs</label>
+          <br>
+          <select id="caryblairs" name="Cary Blairs" value="">
+            <option>None needed</option>
+            <option>10</option>
+            <option>15</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="pure-group">
+          <label for="fecalswab">
+            Fecal Swabs in Cary Blair</label>
+          <br>
+          <select id="fecalswab" name="Fecal Swabs" value="">
+            <option>None needed</option>
+            <option>10</option>
+            <option>15</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="pure-group">
+          <label for="biohazard">
+            Biohazard Bags</label>
+          <br>
+          <select id="biohazard" name="Biohazard Bags" value="">
+            <option>None needed</option>
+            <option>10</option>
+            <option>15</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="pure-group">
+          <label for="nursehat">
+            Nurse Hats</label>
+          <br>
+          <select id="nursehat" name="Nurse Hats" value="">
+            <option>None needed</option>
+            <option>10</option>
+            <option>15</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="pure-group">
+          <label for="strepswabs">
+            Strep Swabs</label>
+          <br>
+          <select id="strepswabs" name="Strep Swabs" value="">
+            <option>None needed</option>
+            <option>10</option>
+            <option>15</option>
           </select>
         </fieldset>
 
         <fieldset class="pure-group">
           <label for="shippingbag">
-            UPS Lab Pak Shipping Bags</label>
+            HSV/VZV Swabs</label>
           <br>
-          <select id="shippingbag" name="Shipping Bags" value="" class="pure-input-1-2">
+          <select id="shippingbag" name="HSV/VZV Swabs" value="">
             <option>None needed</option>
-            <option>20 UPS Shipping Bags</option>
-            <option>40 UPS Shipping Bags</option>
-            <option>60 UPS Shipping Bags</option>
-            <option>80 UPS Shipping Bags</option>
+            <option>10</option>
+            <option>15</option>
           </select>
         </fieldset>
 
         <fieldset class="pure-group">
-          <label for="shippingbox">
-            UPS Shipping Boxes</label>
-          <br>
-          <select id="shippingbox" name="Shipping Boxes" value="" class="pure-input-1-2">
-            <option>None needed</option>
-            <option>20 UPS Shipping Boxes</option>
-            <option>40 UPS Shipping Boxes</option>
-          </select>
-        </fieldset>
-
-        <fieldset class="pure-group">
-          <label for="shippinglabel">
-            UPS Shipping Labels</label>
-          <br>
-          <select id="shippinglabel" name="Shipping Labels" value="" class="pure-input-1-2">
-            <option>None needed</option>
-            <option>20 UPS Shipping Labels</option>
-            <option>40 UPS Shipping Labels</option>
-          </select>
-        </fieldset>
-
-        <fieldset class="pure-group">
-          <label for="message">Additional Requests, Instructions, Comments? </label>
-          <textarea id="message" name="Message" rows="10" placeholder="Tell us what's on your mind..."></textarea>
+          <label for="instructions">Collection Instructions </label>
+          <textarea id="instructions" name="Message" rows="10" placeholder="Tell us what's on your mind..."></textarea>
         </fieldset>
 
         <button class="button-success pure-button button-xlarge" style="
