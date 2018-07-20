@@ -663,12 +663,14 @@ header {
   width: 100%;
 }
 
-.about h3 {
+.about h3,
+h5 {
   -webkit-transition: 0.2s color;
   transition: 0.2s color;
 }
 
-.about:hover h3 {
+.about:hover h3,
+h5 {
   color: #fff;
 }
 
@@ -1487,6 +1489,13 @@ header {
 
 .footer-copyright p {
   text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.terms {
+  text-align: right;
   font-size: 14px;
   text-transform: uppercase;
   margin: 0;
